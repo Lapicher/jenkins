@@ -11,6 +11,8 @@ pipeline {
             steps {
                 // 
                 echo "TEST"
+                echo "parametros del pipeline de jenkins:"
+                echo params.NAME
             }
         }
         stage('Deploy') { 

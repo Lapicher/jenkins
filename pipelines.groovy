@@ -58,9 +58,9 @@ if(project_map.containsKey(params.BUILD_CONFIG))
     print "Si contiene la llave ${params.BUILD_CONFIG}"
     def map_proj = project_map["${params.BUILD_CONFIG}"]
     print map_proj
-    klocwork_project = project_map["${params.BUILD_CONFIG}"]['project_vuc'],
-    klocwork_project_boot = project_map["${params.BUILD_CONFIG}"]['project_boot'],
-    klocwork_server = project_map["${params.BUILD_CONFIG}"]['server'],
+    klocwork_project = project_map["${params.BUILD_CONFIG}"]['project_vuc']
+    klocwork_project_boot = project_map["${params.BUILD_CONFIG}"]['project_boot']
+    klocwork_server = project_map["${params.BUILD_CONFIG}"]['server']
 }
 
 print "project_vuc: ${klocwork_project}"

@@ -36,6 +36,13 @@ Map project_map = [
     'rh850':                            [ 'server': this.klocwork_server_guad, 'project_vuc': 'TVIP_RH850_HTP', 'project_boot': 'TVIP_RH850_HTP_Bootloader' ],
     'rh850_f1k':                        [ 'server': this.klocwork_server_guad, 'project_vuc': 'TVIP_RH850_F1K_HTP', 'project_boot': 'TVIP_RH850_F1K_HTP_Bootloader' ]
 ]
+
+echo ${PREVIOUS_BASELINE}
+echo ${PREVIOUS_TOOLS_BASELINE}
+echo ${BUILD_CONFIG}
+echo ${SEND_TO}
+echo ${BUILD_NOTES}
+
 /*
 *    Now we set the KW projects in case they are needed
 */

@@ -53,7 +53,7 @@ echo "${params.BUILD_NOTES}"
 String klocwork_project = 'NADA AUN MAP'
 String klocwork_project_boot = ''
 String klocwork_server = ''
-if(klocwork.project_map.containsKey(params.BUILD_CONFIG))
+if(project_map.containsKey(params.BUILD_CONFIG))
 {
     print "Si contiene la llave ${params.BUILD_CONFIG}"
     def map_proj = project_map["${params.BUILD_CONFIG}"]

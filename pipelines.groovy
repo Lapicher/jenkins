@@ -63,5 +63,6 @@ if(project_map.containsKey(params.BUILD_CONFIG))
     klocwork_server = project_map["${params.BUILD_CONFIG}"]['server']
 }
 
-print "MAP: "
-print "INFO: klocwork project ${klocwork_project}"
+print "project_vuc: ${klocwork_project}"
+print "project_boot: ${klocwork_project_boot}"
+print "server: ${klocwork_server}"

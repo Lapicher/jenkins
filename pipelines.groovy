@@ -44,7 +44,7 @@ String klocwork_project_boot = ''
 String klocwork_server = ''
 if(project_map.containsKey(params.BUILD_CONFIG))
 {
-    klocwork_project = klocwork.project_map["${params.BUILD_CONFIG}"]['project_vuc'],
+    klocwork_project = project_map["${params.BUILD_CONFIG}"]['project_vuc'],
     // klocwork_project_boot = klocwork.project_map["${params.BUILD_CONFIG}"]['project_boot'],
     // klocwork_server = klocwork.project_map["${params.BUILD_CONFIG}"]['server'],
 }

@@ -54,6 +54,9 @@ String klocwork_project_boot = ''
 String klocwork_server = ''
 if(klocwork.project_map.containsKey(params.BUILD_CONFIG))
 {
+    print "Si contiene la llave ${params.BUILD_CONFIG}"
+    def map_proj = project_map["${params.BUILD_CONFIG}"]
+    print map_proj
     klocwork_project = project_map["${params.BUILD_CONFIG}"]['project_vuc'],
     klocwork_project_boot = klocwork.project_map["${params.BUILD_CONFIG}"]['project_boot'],
     klocwork_server = klocwork.project_map["${params.BUILD_CONFIG}"]['server'],

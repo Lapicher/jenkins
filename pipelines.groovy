@@ -8,7 +8,8 @@ print "TEST"
 String klocwork_server_guad = 'zuas712x.zu.mx.conti.de:8092'
 
 print "SI PASO el server"
-def project_map = [
+@groovy.transform.Field
+MAP project_map = [
     /* Edison */
     'otp-1.y':                          [ 'server': this.klocwork_server_guad, 'project': 'OTP_Conti_Pckgs_1y'],
     /* Bell / Watson */
@@ -57,9 +58,9 @@ if(klocwork.project_map.containsKey(params.BUILD_CONFIG))
     print "Si contiene la llave ${params.BUILD_CONFIG}"
     def map_proj = project_map["${params.BUILD_CONFIG}"]
     print map_proj
-    klocwork_project = project_map["${params.BUILD_CONFIG}"]['project_vuc'],
-    klocwork_project_boot = klocwork.project_map["${params.BUILD_CONFIG}"]['project_boot'],
-    klocwork_server = klocwork.project_map["${params.BUILD_CONFIG}"]['server'],
+    klocwork_project = project_map["${params.BUILD_CONFIG}"]['project_vuc']
+    //klocwork_project_boot = project_map["${params.BUILD_CONFIG}"]['project_boot']
+    //klocwork_server = project_map["${params.BUILD_CONFIG}"]['server']
 }
 
 print "MAP: "

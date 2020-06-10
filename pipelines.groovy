@@ -7,6 +7,8 @@ print "TEST"
 @groovy.transform.Field
 String klocwork_server_guad = 'zuas712x.zu.mx.conti.de:8092'
 
+print "SI PASO el server"
+
 //@groovy.transform.Field
 Map project_map = [
     /* Edison */

@@ -4,7 +4,7 @@ print "TEST"
  *   Klocwork
  */
 
-//@groovy.transform.Field
+@groovy.transform.Field
 String klocwork_server_guad = 'zuas712x.zu.mx.conti.de:8092'
 
 //@groovy.transform.Field

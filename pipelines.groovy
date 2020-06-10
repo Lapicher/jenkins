@@ -9,7 +9,7 @@ String klocwork_server_guad = 'zuas712x.zu.mx.conti.de:8092'
 
 print "SI PASO el server"
 @groovy.transform.Field
-MAP project_map = [
+Map project_map = [
     /* Edison */
     'otp-1.y':                          [ 'server': this.klocwork_server_guad, 'project': 'OTP_Conti_Pckgs_1y'],
     /* Bell / Watson */

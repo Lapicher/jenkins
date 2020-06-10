@@ -56,5 +56,4 @@ String klocwork_project_boot = ''
 String klocwork_server = ''
 
 print "MAP: "
-print project_map
 print "INFO: klocwork project ${klocwork_project}"

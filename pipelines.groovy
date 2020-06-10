@@ -52,6 +52,12 @@ echo "${params.BUILD_NOTES}"
 String klocwork_project = 'NADA AUN MAP'
 String klocwork_project_boot = ''
 String klocwork_server = ''
+if(klocwork.project_map.containsKey(params.BUILD_CONFIG))
+{
+    klocwork_project = project_map["${params.BUILD_CONFIG}"]['project_vuc'],
+    klocwork_project_boot = klocwork.project_map["${params.BUILD_CONFIG}"]['project_boot'],
+    klocwork_server = klocwork.project_map["${params.BUILD_CONFIG}"]['server'],
+}
 
 print "MAP: "
 print "INFO: klocwork project ${klocwork_project}"

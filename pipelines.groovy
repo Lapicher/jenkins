@@ -4,10 +4,10 @@ print "TEST"
  *   Klocwork
  */
 
-@groovy.transform.Field
+//@groovy.transform.Field
 String klocwork_server_guad = 'zuas712x.zu.mx.conti.de:8092'
 
-@groovy.transform.Field
+//@groovy.transform.Field
 Map project_map = [
     /* Edison */
     'otp-1.y':                          [ 'server': this.klocwork_server_guad, 'project': 'OTP_Conti_Pckgs_1y'],

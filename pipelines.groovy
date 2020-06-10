@@ -41,11 +41,11 @@ Map project_map = [
 ]
 
 
-echo ${PREVIOUS_BASELINE}
-echo ${PREVIOUS_TOOLS_BASELINE}
-echo ${BUILD_CONFIG}
-echo ${SEND_TO}
-echo ${BUILD_NOTES}
+echo ${params.PREVIOUS_BASELINE}
+echo ${params.PREVIOUS_TOOLS_BASELINE}
+echo ${params.BUILD_CONFIG}
+echo ${params.SEND_TO}
+echo ${params.BUILD_NOTES}
 
 /*
 *    Now we set the KW projects in case they are needed

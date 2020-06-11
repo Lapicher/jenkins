@@ -66,3 +66,40 @@ if(project_map.containsKey(params.BUILD_CONFIG))
 print "project_vuc: ${klocwork_project}"
 print "project_boot: ${klocwork_project_boot}"
 print "server: ${klocwork_server}"
+
+// Next fix
+def scope_map = [
+     'rh850_f1k':  ['internal': 'Tvip_Vuc', 'public': 'Tvip'],
+     'rh850':      ['internal': 'Tvip_Vuc', 'public': 'Tvip'],
+     'microsar':   ['internal': 'tvip_micro', 'public': 'tvip_microsar']
+]
+def previous_baseline = "${params.PREVIOUS_BASELINE}" ? "${params.PREVIOUS_BASELINE}" : ' '
+def previous_tools_baseline = "${params.PREVIOUS_TOOLS_BASELINE}" ? "${params.PREVIOUS_TOOLS_BASELINE}" : ' '
+def release_id = scope_map["${params.BUILD_CONFIG}"]["${params.SCOPE}"]
+def save_package_to = "Z:\\Project Documents\\Releases\\${scope}\\${release_id}"
+/* Set environment for all notes */
+def env_list = [
+/* From environment */
+    'BUILD_LOG_URL=' + env.BUILD_URL,
+    'BUILD_NUMBER=' + env.BUILD_NUMBER,
+    'JENKINS_HOME=' + env.JENKINS_HOME,
+    'JOB_BASE_NAME=' + env.JOB_BASE_NAME,
+    'JOB_NAME=' + env.JOB_NAME,
+/* From build parameters */
+    'BUILD_CONFIG=' + params.BUILD_CONFIG,
+    'BUILD_NOTES=' + params.BUILD_NOTES,
+    'CAS_BRANCH=' + params.CAS_BRANCH,
+    'SCOPE=' + params.SCOPE,
+    'SEND_TO=' + params.SEND_TO,
+    'TRIGGER_VARIANTS=' + params.TRIGGER_VARIANTS,
+/* From gerrit trigger*/
+/* From script */
+    'PREVIOUS_BASELINE=' + previous_baseline,
+    'PREVIOUS_TOOLS_BASELINE=' + previous_tools_baseline,
+    'RELEASE_ID=' + release_id,
+    'SAVE_PACKAGE_TO=' + save_package_to,
+/* From project_map*/
+    'KW_PROJECT_VUC=' + klocwork_project,
+    'KW_PROJECT_BOOT=' + klocwork_project_boot,
+    'KW_SERVER=' + klocwork_server
+]
